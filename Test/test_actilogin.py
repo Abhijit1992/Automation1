@@ -3,12 +3,13 @@ import time
 import pytest
 from Pages.LoginPage import LoginPage
 from Pages.HomePage import HomePage
+from Test_Data.Data import *
 
 @pytest.fixture(scope='session')
 def test_launch_browser():
     global driver
     driver = webdriver.Chrome(executable_path="C:/Users/LENOVO/PycharmProjects/Automation 1/Driver/chromedriver.exe")
-    driver.get("https://online.actitime.com/amullick/login.do")
+    driver.get(URL)
     driver.maximize_window()
     driver.implicitly_wait(30)
 
